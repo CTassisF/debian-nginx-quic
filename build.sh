@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker build -t nginx-quic .
+docker build --no-cache --tag nginx-quic .
 
 ID=$(docker create nginx-quic)
 docker cp $ID:/build/nginx-quic/objs/nginx .
